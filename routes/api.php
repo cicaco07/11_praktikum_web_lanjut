@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MahasiswaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,12 +19,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
+// Praktikum 1
 // Route::get('/hello', function(){
 //     $data=["message"=>"hello world"];
 //     return response()->json($data);
 // });
 
-Route::get('hello', function(){
-    return "hello world";
-});
+// Route::get('hello', function(){
+//     return "hello world";
+// });
+
+
+//Praktikum 2
+Route::apiResource('/mahasiswa', MahasiswaController::class);
