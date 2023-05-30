@@ -27,6 +27,8 @@ Route::middleware('auth:sanctum')->group(function(){
 
 Route::post('/login', [ApiAuthController::class, 'login']);
 
+Route::post('/register', [ApiAuthController::class, 'register']);
+
 // Praktikum 1
 // Route::get('/hello', function(){
 //     $data=["message"=>"hello world"];
